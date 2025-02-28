@@ -6,7 +6,7 @@ const rl = readline.createInterface({
   output: process.stdout,
 })
 
-rl.question('Enter piece and position (e.g., King, D5):', (input: string) => {
+rl.question('Enter piece and position separated by comma (King, D5):', (input: string) => {
   try {
     const [piece, position] = input.split(',').map((ele) => ele.trim())
     const chessPosition = getPiece(piece, position)
